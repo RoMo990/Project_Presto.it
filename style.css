@@ -1,0 +1,104 @@
+/* FONTS SET */
+
+*{
+
+    font-family: 'Raleway', sans-serif;
+
+}
+
+h1, h2, h3, .h1, .h2, .h3{
+
+    font-family: 'Alegreya Sans', sans-serif;
+
+}
+
+/* COLOUR SET */
+
+:root{
+
+    --primary: #D6C41E;
+    --secondary: #44308C;
+    --accent: #8C843C;
+    --whiteCustom: #FFFBD6;
+    --blackCustom: #101414;
+
+}
+
+/* COLOUR CLASS */
+
+.text-primaryC{
+
+    color: var(--primary);
+
+}
+
+.text-secondaryC{
+
+    color: var(--secondary);
+
+}
+
+.text-accentC{
+
+    color: var(--accent);
+
+}
+
+.text-whiteC{
+
+    color: var(--whiteCustom);
+
+}
+
+.text-blackC{
+
+    color: var(--blackCustom);
+
+}
+
+/* COLOUR BG CLASS */
+
+.background-primaryC{
+
+    background-color: var(--primary);
+
+}
+
+.background-secondaryC{
+
+    background-color: var(--secondary);
+
+}
+
+.background-accentC{
+
+    background-color: var(--accent);
+
+}
+
+.background-whiteC{
+
+    background-color: var(--whiteCustom);
+
+}
+
+.background-blackC{
+
+    background-color: var(--blackCustom);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
