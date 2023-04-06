@@ -2,27 +2,29 @@
 
 *{
 
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Jost', sans-serif;
 
 }
 
 h1, h2, h3, .h1, .h2, .h3{
 
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 
 }
+
 
 /* COLOUR SET */
 
 :root{
 
-    --primary: #D6C41E;
-    --secondary: #44308C;
-    --accent: #8C843C;
-    --whiteCustom: #FFFBD6;
-    --blackCustom: #101414;
+    --primary: rgb(255, 96, 0);
+    --secondary: rgb(38, 42, 86);
+    --accent: rgb(184, 98, 27);
+    --whiteCustom: rgb(249, 245, 235);
+    --blackCustom: rgb(21, 21, 33);
 
 }
+
 
 /* COLOUR CLASS */
 
@@ -56,6 +58,7 @@ h1, h2, h3, .h1, .h2, .h3{
 
 }
 
+
 /* COLOUR BG CLASS */
 
 .background-primaryC{
@@ -85,6 +88,63 @@ h1, h2, h3, .h1, .h2, .h3{
 .background-blackC{
 
     background-color: var(--blackCustom);
+
+}
+
+/* HEADER */
+
+.headerCustom{
+
+   background:linear-gradient(rgba(21, 21, 33, 0.3), rgba(21, 21, 33, 0.3)), url('./media/Header.jpg'); 
+   background-position: center;
+   background-size: cover;
+
+}
+
+.logoCustom{
+    
+    width: 60px;
+    transition: 0.4s;
+
+}
+
+.myLink{
+
+    color: var(--whiteCustom); 
+
+}
+
+.myLink:hover{
+
+    color: var(--whiteCustom);
+    border-bottom: 1px solid var(--whiteCustom);
+
+}
+
+.btnCustom{
+
+    background-color: var(--primary);
+    color: var(--blackCustom);
+    transition: 0.5s;
+
+}
+
+.btnCustom:hover{
+
+    background-color: rgba(21, 21, 33, 0.1);
+    color: var(--primary);
+
+}
+
+#navIcon{
+
+    transition: 0.5s;
+
+}
+
+#mainNavbar{
+
+    transition: 0.4s;
 
 }
 
