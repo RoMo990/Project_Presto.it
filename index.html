@@ -6,6 +6,9 @@
     <title>Presto.it</title>
     <link rel="shortcut icon" href="./media/LogoOrange.png" type="image/x-icon">
 
+     <!-- AOS CDN -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- GOOGLE FONTS CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,12 +47,14 @@
         
         </a>
 
+        <!-- TOGGLER -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
           <i class="fa-solid fa-circle-chevron-down fa-2x text-primaryC fa-rotate-180" id="navIcon"></i>
 
         </button>
 
+        <!-- TAB NAVBAR -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -64,6 +69,7 @@
             </li>
           </ul>
 
+          <!-- SEARCH FORM -->
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Ricerca" aria-label="Search">
             <button class="btn btnCustom" type="submit"><i class="fa-solid fa-magnifying-glass"></i></i></button>
@@ -81,9 +87,12 @@
 
     <header class="container-fluid">
 
-      <div class="row">
+      <div class="row vh-100 headerCustom align-items-center">
 
-        <div class="col-12 vh-100 headerCustom img-fluid">
+        <div class="col-12 text-center">
+
+          <h1 class="fw-bold text-whiteC d-block" data-aos="zoom-out" data-aos-duration="800">PRESTO...</h1>
+          <p class="fw-bold text-primaryC display-5" data-aos="zoom-out" data-aos-duration="800">Si viaggia!</p>
 
         </div>
 
@@ -93,12 +102,45 @@
 
     <!-- HEADER END -->
 
-    <div style="height: 4000px"></div>
+    <!-- SECTION AOS START-->
+
+    <section class="container">
+
+      <div class="row">
+
+        <div class="col-12 col-md-6 pt-5">
+
+          <h2 class="text-center fw-bold">Un po' di numeri</h2>
+          <p class="lead text-center pt-3"><span id="firstSpan" class="incrementNumbers d-block mt-4">0</span> Destinazioni</p>
+          <p class="lead text-center pt-3"><span id="secondSpan" class="incrementNumbers d-block mt-4">0</span>Partner</p>
+          <p class="lead text-center pt-3"><span id="thirdSpan" class="incrementNumbers d-block mt-4">0</span>Box Venduti</p>
+
+        </div>
+
+        <div class="col-12 col-md-6 pt-5 d-flex justify-content-center">
+
+          <img class="imgWorld px-3" src="./media/TravelWorld.png" alt="Viaggiando per il world" data-aos-duration="800" data-aos="fade-left">
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION AOS END -->
 
 
 
     <!-- JS BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- JS AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- INIZIALIZZAZIONE AOS -->
+    <script>
+      AOS.init();
+    </script>
 
     <!-- JS INTERNO CUSTOM -->
     <script>
