@@ -30,7 +30,7 @@ window.addEventListener('scroll', ()=>{
     if(window.scrollY > 0){
 
         mainNavbar.classList.remove('bg-transparent');
-        mainNavbar.classList.add('background-blackC');
+        mainNavbar.classList.add('background-secondaryC');
         logoWhite.classList.remove('d-none');
         logoOrange.classList.add('d-none');
 
@@ -46,7 +46,7 @@ window.addEventListener('scroll', ()=>{
 
     } else{
 
-        mainNavbar.classList.remove('background-blackC');
+        mainNavbar.classList.remove('background-secondaryC');
         mainNavbar.classList.add('bg-transparent');
         logoOrange.classList.remove('d-none');
         logoWhite.classList.add('d-none');

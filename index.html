@@ -9,6 +9,9 @@
      <!-- AOS CDN -->
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+     <!-- SWIPER CDN -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
     <!-- GOOGLE FONTS CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,11 +107,11 @@
 
     <!-- SECTION AOS START-->
 
-    <section class="container">
+    <section class="container text-blackC pt-5 pb-5">
 
       <div class="row">
 
-        <div class="col-12 col-md-6 pt-5">
+        <div class="col-12 col-md-6 pt-5 pb-5">
 
           <h2 id="h2Section" class="text-center fw-bold">Un po' di numeri</h2>
 
@@ -120,7 +123,7 @@
 
         </div>
 
-        <div class="col-12 col-md-6 pt-5 d-flex justify-content-center">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
 
           <img class="imgWorld px-3" src="./media/TravelWorld.png" alt="Viaggiando per il world" data-aos-duration="800" data-aos="fade-left">
 
@@ -132,6 +135,36 @@
 
     <!-- SECTION AOS END -->
 
+    <!-- SWIPER START -->
+
+    <section class="container-fluid">
+
+      <div class="row vh-75 background-secondaryC align-items-center pt-5 pb-5">
+
+        <div class="col-12">
+
+          <!-- Slider main container -->
+          <div class="swiper">
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+        
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev text-primaryC"></div>
+            <div class="swiper-button-next text-primaryC"></div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SWIPER END -->
 
 
     <!-- JS BOOTSTRAP -->
@@ -145,8 +178,99 @@
       AOS.init();
     </script>
 
+    <!-- JS SWIPER -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <!-- JS INTERNO CUSTOM -->
     <script>
+
+      // recensioni
+      let review = [
+
+        {name : 'Annalisa' , quote : `Viaggiare con loro è sempre una certezza!`, vote : 5},
+        {name : 'Michele' , quote : `Gentilezza, disponibilità e ottimo rapporto qualità prezzo!`, vote : 5},
+        {name : 'Vittorio' , quote : `Agenzia disorganizzata, si prendono i soldi e spariscono, non sono più riuscito a mettermi in contatto con loro.`, vote : 1},
+        {name : 'Cristina' , quote : `Tutto bello, ma potrei organizzarmi i viaggi da solo e il risultato sarebbe migliore`, vote : 3},
+        {name : 'Matteo' , quote : `Non capisco perché agenzie come questa rimangono ancora aperte!`, vote : 2},
+
+        ];
+
+      // cattura swiper wrapper
+      let swiperWrapper = document.querySelector('.swiper-wrapper');
+
+      // forEach per ogni elemento di review
+      review.forEach( (recensione)=>{
+
+        let div = document.createElement('div');
+
+        div.classList.add('swiper-slide' , 'd-flex' , 'align-items-center' , 'justify-content-center');
+
+        div.innerHTML = `
+        
+                      <div class="cardCustom">
+                        <h3>${recensione.name}</h3>
+                        <p class="text-center">${recensione.quote}</p">
+                        
+                        <div class="d-flex"> 
+                          ${createStars(recensione.vote)}
+                        </div>
+                      </div>
+        
+        `;
+
+      swiperWrapper.appendChild(div);
+
+      })
+
+      // funzione stelline
+      function createStars(fullStars){
+
+        let final = '';
+
+        for(let i = 1; i <= 5; i++){
+
+          if(fullStars >= i){
+
+            final += `<i class="fa-solid fa-star"></i>`;
+
+          } else {
+
+            final += `<i class="fa-regular fa-star"></i>`
+
+          }
+
+        }
+
+        return final;
+
+      }
+
+      // Swiper
+
+      const swiper = new Swiper('.swiper', {
+
+          // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+
+          // Autoplay
+          autoplay: {
+                  delay: 4000,
+                  disableOnInteraction: false,
+          },
+        
+          // If we need pagination
+          pagination: {
+                  el: '.swiper-pagination',
+          },
+
+          // Navigation arrows
+          navigation: {
+                  nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+          },
+
+      });
 
     </script>
 
