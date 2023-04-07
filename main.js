@@ -16,6 +16,7 @@ navIcon.addEventListener('click', ()=>{
 // cattura main navbar
 let mainNavbar = document.querySelector('#mainNavbar');
 
+// cattura link main navbar
 let myLink = document.querySelectorAll('.myLink');
 
 // cattura loghi
@@ -33,6 +34,7 @@ window.addEventListener('scroll', ()=>{
         logoWhite.classList.remove('d-none');
         logoOrange.classList.add('d-none');
 
+        // evento link navbar
         myLink.forEach((el)=>{
 
             el.classList.add('text-primaryC');
@@ -49,6 +51,7 @@ window.addEventListener('scroll', ()=>{
         logoOrange.classList.remove('d-none');
         logoWhite.classList.add('d-none');
        
+        // evento link navbar
         myLink.forEach((el)=>{
 
             el.classList.remove('text-primaryC');
@@ -66,7 +69,6 @@ window.addEventListener('scroll', ()=>{
 // CHIAMATA ASINCRONA
 
 // cattura span numero 0
-
 let firstSpan = document.querySelector('#firstSpan');
 
 let secondSpan = document.querySelector('#secondSpan');
@@ -74,7 +76,6 @@ let secondSpan = document.querySelector('#secondSpan');
 let thirdSpan = document.querySelector('#thirdSpan');
 
 // funzione chiamata asincrona
-
 function createInterval(finalNumber, element){
 
     let counter = 0;
@@ -93,10 +94,40 @@ function createInterval(finalNumber, element){
 
         }
 
-    }, 1)
+    }, 0.5)
 
 }
 
-createInterval(1200, firstSpan);
-createInterval(250, secondSpan);
-createInterval(1500, thirdSpan);
+
+// INTERSECTION OBSERVER
+
+// variabile d'appoggio
+let checkInterval = false;
+
+// cattura h2 section aos
+let h2Section = document.querySelector('#h2Section');
+
+// funzione intersection observer
+let observed = new IntersectionObserver(
+
+    (entries)=>{
+
+        entries.forEach( (entry)=>{
+
+            if(entry.isIntersecting && checkInterval == false){
+
+                createInterval(1200, firstSpan);
+                createInterval(250, secondSpan);
+                createInterval(1500, thirdSpan);
+
+                checkInterval = true;
+
+            } 
+
+        })
+
+    }
+
+)
+
+observed.observe(h2Section);
