@@ -1,16 +1,3 @@
-// ICONA NAVBAR
-
-// cattura icona navbar
-let navIcon = document.querySelector('#navIcon');
-
-// evento click sul toggler
-navIcon.addEventListener('click', ()=>{
-
-    navIcon.classList.toggle('fa-rotate-180'); 
-
-});
-
-
 // MAIN NAVBAR
 
 // cattura main navbar
@@ -19,10 +6,20 @@ let mainNavbar = document.querySelector('#mainNavbar');
 // cattura link main navbar
 let myLink = document.querySelectorAll('.myLink');
 
+// cattura icona navbar
+let navIcon = document.querySelector('#navIcon');
+
 // cattura loghi
 let logoOrange = document.querySelector('#logoOrange');
 
 let logoWhite = document.querySelector('#logoWhite');
+
+// evento click sul toggler
+navIcon.addEventListener('click', ()=>{
+
+    navIcon.classList.toggle('fa-rotate-180'); 
+
+});
 
 // evento scroll main navbar
 window.addEventListener('scroll', ()=>{
@@ -131,3 +128,55 @@ let observed = new IntersectionObserver(
 )
 
 observed.observe(h2Section);
+
+
+// MOUSE ENTER
+
+// cattura icona aereo
+let iconAereo = document.querySelectorAll('.fa-plane-departure');
+
+// cattura card
+let colCustom = document.querySelectorAll('.col-custom');
+
+// variabile d'appoggio
+let columnsConfirm = false;
+
+colCustom.forEach( (colonna, i)=>{
+
+    // evento mouseenter
+    colonna.addEventListener('mouseenter', ()=>{
+
+        if(columnsConfirm == false){
+
+            iconAereo[i].classList.remove('text-secondaryC');
+            iconAereo[i].classList.add('text-whiteC');
+
+        } else {
+
+            iconAereo[i].classList.add('text-secondaryC');
+
+        }
+
+    })
+
+    // evento mouseleave
+    colonna.addEventListener('mouseleave', ()=>{
+
+        if(columnsConfirm == false){
+
+            iconAereo[i].classList.remove('text-whiteC');
+            iconAereo[i].classList.add('text-accent');
+
+            columnsConfirm = true;
+
+        } else {
+
+            iconAereo[i].classList.add('text-secondaryC');
+
+            columnsConfirm = false;
+
+        }       
+        
+    })
+
+});
