@@ -250,6 +250,18 @@ a:hover{
 
 }
 
+.footer-link{
+
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: bold; 
+
+}
+
+.divAncor{
+    height: 50px;
+}
+
 
 
 
