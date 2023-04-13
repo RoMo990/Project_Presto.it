@@ -62,10 +62,10 @@
 
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item pe-5">
-              <a class="nav-link myLink" aria-current="page" href="">Home</a>
+              <a class="nav-link myLink" aria-current="page" href="./index.html">Home</a>
             </li>
             <li class="nav-item pe-5">
-              <a class="nav-link myLink" href="./shop.html" target="_blank">Shop</a>
+              <a class="nav-link myLink" href="#">Shop</a>
             </li>
             <li class="nav-item pe-5">
               <a class="nav-link myLink" href="#">Chi siamo</a>
@@ -95,7 +95,7 @@
         <div class="col-12 text-center">
 
           <h1 class="fw-bold text-whiteC d-block display-5" data-aos="fade-right" data-aos-duration="800">PRESTO...</h1>
-          <p class="fw-bold text-primaryC display-5" data-aos="fade-left" data-aos-duration="800">Si viaggia!</p>
+          <p class="fw-bold text-primaryC display-5" data-aos="fade-left" data-aos-duration="800">Si compra!</p>
 
         </div>
 
@@ -105,127 +105,98 @@
 
     <!-- HEADER END -->
 
-    <!-- SECTION AOS START-->
 
-    <div class="divAncor" id="SectionAos">
+    <!-- NEGOZIO START -->
 
-
-    </div>
-
-    <section class="container text-blackC py-5" >
+    <section class="container-fluid my-5">
 
       <div class="row">
 
-        <div class="col-12 col-md-6 py-5">
+        <h2>Filtra per:</h2>
 
-          <h2 id="h2Section" class="text-center fw-bold">Un po' di numeri...</h2>
+        <div class="col-12 col-md-3">
 
-          <p class="lead text-center pt-3"><span id="firstSpan" class="incrementNumbers display-3 d-block mt-4">0</span>Destinazioni</p>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
 
-          <p class="lead text-center pt-3"><span id="secondSpan" class="incrementNumbers display-3 d-block mt-4">0</span>Partner</p>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Categoria
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 
-          <p class="lead text-center pt-3"><span id="thirdSpan" class="incrementNumbers display-3 d-block mt-4">0</span>Box Venduti</p>
+                <!-- filtro per categoria -->
+                <div class="accordion-body" id="categoryWrapper">
 
-        </div>
+                  <div class="form-check">
 
-        <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="All" checked>
+                    <label class="form-check-label" for="All">
+                      Tutte le categorie
+                    </label>
 
-          <img class="imgWorld px-3" src="./media/TravelWorld.png" alt="Viaggiando per il world" data-aos-duration="800" data-aos="fade-left">
+                  </div>
 
-        </div>
+                </div>
 
-      </div>
-
-    </section>
-
-    <!-- SECTION AOS END -->
-
-    <!-- SWIPER START -->
-
-    <div class="divAncor" id="sectionSwiper">
-
-
-    </div>
-
-    <section class="container-fluid">
-
-      <div class="row vh-75 background-secondaryC align-items-center pt-5 pb-5">
-
-        <h2 class="text-primaryC text-center pb-5">Dicono di noi</h2>
-
-        <div class="col-12">
-
-          <!-- Slider main container -->
-          <div class="swiper">
-
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-        
+              </div>
             </div>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev text-primaryC"></div>
-            <div class="swiper-button-next text-primaryC"></div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Prezzo
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
 
+                <!-- filtro per prezzo -->
+                <div class="accordion-body">
 
-          </div>
+                </div>
 
-        </div>
+              </div>
+            </div>
 
-      </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Parola
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <!-- filtro per parola -->
+                <div class="accordion-body">
 
-    </section>
+                </div>
 
-    <!-- SWIPER END -->
-
-    <!-- MOUSE ENTER START -->
-
-    <div class="divAncor" id="destinations">
-
-
-    </div>
-
-    <section class="container-fluid">
-
-      <div class="container">
-
-        <div class="row py-5 justify-content-evenly">
-
-          <div class="col-12 col-md-3 col-custom my-3">
-
-            <i class="fa-solid fa-plane-departure fa-3x text-primaryC"></i>
-            <p class="fw-bold pt-3">Lorem Ipsum</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nobis.</p>
-
-          </div>
-
-          <div class="col-12 col-md-3 col-custom my-3">
-
-            <i class="fa-solid fa-plane-departure fa-3x text-primaryC"></i>
-            <p class="fw-bold pt-3">Lorem Ipsum</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nobis.</p>
-
-          </div>
-
-          <div class="col-12 col-md-3 col-custom my-3">
-
-            <i class="fa-solid fa-plane-departure fa-3x text-primaryC"></i>
-            <p class="fw-bold pt-3">Lorem Ipsum</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nobis.</p>
+              </div>
+            </div>
 
           </div>
 
         </div>
 
+        <div class="col-12 col-md-9">
+
+          <div class="row" id="cardsWrapper">
+
+          </div>
+          
+        </div>
+
       </div>
+
 
     </section>
 
-    <!-- MOUSE ENTER END -->
+    <!-- NEGOZIO END -->
+
 
     <!-- FOOTER START -->
 
-    <footer class="container-fluid background-primaryC text-secondaryC">
+    <!-- <footer class="container-fluid background-primaryC text-secondaryC">
 
       <div class="container">
 
@@ -298,7 +269,7 @@
         </div>
       </div>
 
-    </footer>
+    </footer> -->
 
     <!-- FOOTER END -->
 
@@ -314,104 +285,13 @@
       AOS.init();
     </script>
 
-    <!-- JS SWIPER -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
     <!-- JS INTERNO CUSTOM -->
     <script>
-
-      // recensioni
-      let review = [
-
-        {name : 'Annalisa' , quote : `Viaggiare con loro è sempre una certezza!`, vote : 5},
-        {name : 'Michele' , quote : `Gentilezza, disponibilità e ottimo rapporto qualità prezzo!`, vote : 5},
-        {name : 'Vittorio' , quote : `Agenzia disorganizzata, si prendono i soldi e spariscono, non sono più riuscito a mettermi in contatto con loro.`, vote : 1},
-        {name : 'Cristina' , quote : `Tutto bello, ma potrei organizzarmi i viaggi da solo e il risultato sarebbe migliore`, vote : 3},
-        {name : 'Matteo' , quote : `Non capisco perché agenzie come questa rimangono ancora aperte!`, vote : 2},
-
-        ];
-
-      // cattura swiper wrapper
-      let swiperWrapper = document.querySelector('.swiper-wrapper');
-
-      // forEach per ogni elemento di review
-      review.forEach( (recensione)=>{
-
-        let div = document.createElement('div');
-
-        div.classList.add('swiper-slide' , 'd-flex' , 'align-items-center' , 'justify-content-center');
-
-        div.innerHTML = `
-        
-                      <div class="cardCustom">
-                        <h3>${recensione.name}</h3>
-                        <p class="text-center">${recensione.quote}</p">
-                        
-                        <div class="d-flex"> 
-                          ${createStars(recensione.vote)}
-                        </div>
-                      </div>
-        
-        `;
-
-      swiperWrapper.appendChild(div);
-
-      })
-
-      // funzione stelline
-      function createStars(fullStars){
-
-        let final = '';
-
-        for(let i = 1; i <= 5; i++){
-
-          if(fullStars >= i){
-
-            final += `<i class="fa-solid fa-star"></i>`;
-
-          } else {
-
-            final += `<i class="fa-regular fa-star"></i>`
-
-          }
-
-        }
-
-        return final;
-
-      }
-
-      // Swiper
-
-      const swiper = new Swiper('.swiper', {
-
-          // Optional parameters
-          direction: 'horizontal',
-          loop: true,
-
-          // Autoplay
-          autoplay: {
-                  delay: 4000,
-                  disableOnInteraction: false,
-          },
-        
-          // If we need pagination
-          pagination: {
-                  el: '.swiper-pagination',
-          },
-
-          // Navigation arrows
-          navigation: {
-                  nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-          },
-
-      });
 
     </script>
 
     <!-- JS ESTERNO CUSTOM -->
-    <script src="./main.js"></script>
+    <script src="./negozio.js"></script>
 
   </body>
 </html>

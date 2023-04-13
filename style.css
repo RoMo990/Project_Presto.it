@@ -259,9 +259,26 @@ a:hover{
 }
 
 .divAncor{
-    height: 50px;
+    height: 60px;
 }
 
+
+/* PAGINA NEGOZIO */
+
+/* card */
+
+.announcement-card{
+
+    min-height: 300px;
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
 
 
 
